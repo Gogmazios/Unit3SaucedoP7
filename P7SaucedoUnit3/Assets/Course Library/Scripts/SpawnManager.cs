@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject op;
+    public GameObject[] op;
     private Vector3 spawnPos = new Vector3(25, 0, 0);
     private float sd = 2;
     private float rr = 2;
     public PlayerController Player;
+    private int randomObstacle;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,7 +20,8 @@ public class SpawnManager : MonoBehaviour
     {
         if (Player.gameOver == false)
         {
-            Instantiate(op, spawnPos, op.transform.rotation);
+            randomObstacle = Random.Range(0, op.Length);
+            Instantiate(op[randomObstacle], spawnPos, op[randomObstacle].transform.rotation);
         }
     }
 

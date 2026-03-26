@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
     public bool gameOver = false;
     private Animator playerAnim;
     public ParticleSystem explosionParticle;
-    public ParticleSystem dirtParticle; 
+    public ParticleSystem dirtParticle;
+    public AudioClip crashSound;
+    public AudioClip jumpSound; 
+    private AudioSource PA; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,7 +21,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
         Physics.gravity *= GM;
-        
+        PA = GetComponent<AudioSource>();
 
     }
 
@@ -31,7 +34,9 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * JF, ForceMode.Impulse);
             isOnGround = false;
             playerAnim.SetTrigger("Jump_trig");
-            dirtParticle.Stop(); 
+            dirtParticle.Stop();
+            PA.PlayOneShot(jumpSound, 1.0f);
+
         }
 
 
@@ -62,7 +67,8 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetInteger("DeathType_int", 1);
             explosionParticle.Play();
             Destroy(rb);
-            dirtParticle.Stop(); 
+            dirtParticle.Stop();
+            PA.PlayOneShot(crashSound, 1.0f);
         }
       
 
