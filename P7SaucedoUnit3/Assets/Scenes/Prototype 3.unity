@@ -514,7 +514,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0790d1998f68c4f4b80d88dca23fd5d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  op: []
+  op:
+  - {fileID: 3503048603563862736, guid: 986fed7759f04d142bce7a50797a2524, type: 3}
+  - {fileID: 2994869572106629744, guid: 0d215990fce67244289806ba3039f4b0, type: 3}
+  - {fileID: 8313642356943420628, guid: 7f64acb67a4d3b74f833da388f57fc8b, type: 3}
+  - {fileID: 4448703920979425819, guid: b8a8105511940f84fa4e12b79a50a3b3, type: 3}
   Player: {fileID: 0}
 --- !u!4 &783284225
 Transform:
@@ -678,7 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d56225d631ddd4c898cd3126cea842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JF: 3000
+  JF: 2750
   GM: 5
   isOnGround: 1
   gameOver: 0
@@ -686,6 +690,10 @@ MonoBehaviour:
   dirtParticle: {fileID: 54134180}
   crashSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
   jumpSound: {fileID: 8300000, guid: 0f7d0b7c3397f4dac91f20e8a77d2d57, type: 3}
+  DJU: 0
+  DJF: 1750
+  a: 3
+  doubleSpeed: 0
 --- !u!4 &792429123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0703a1849c2c89b4db4568688faf0c5f, type: 3}
@@ -1188,6 +1196,52 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
   m_PrefabInstance: {fileID: 1455505369}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1721605552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721605554}
+  - component: {fileID: 1721605553}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1721605553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721605552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866d8027f51a82c4f940a07b1bc9b7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  Player: {fileID: 0}
+--- !u!4 &1721605554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721605552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.47597, y: 2.3663898, z: -21.305895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2014335011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3503048603563862736, guid: 986fed7759f04d142bce7a50797a2524, type: 3}
       propertyPath: m_Name
-      value: Obstacle
+      value: Obstacle_Barrier
       objectReference: {fileID: 0}
     - target: {fileID: 3503048603564226288, guid: 986fed7759f04d142bce7a50797a2524, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1434,3 +1488,4 @@ SceneRoots:
   - {fileID: 792429117}
   - {fileID: 8511599072781893671}
   - {fileID: 783284225}
+  - {fileID: 1721605554}

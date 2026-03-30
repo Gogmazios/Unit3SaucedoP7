@@ -12,8 +12,12 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dirtParticle;
     public AudioClip crashSound;
     public AudioClip jumpSound; 
-    private AudioSource PA; 
-
+    private AudioSource PA;
+    public bool DJU = false;
+    public float DJF; 
+    public int a;
+    public bool doubleSpeed = false; 
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,11 +41,28 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             PA.PlayOneShot(jumpSound, 1.0f);
 
+            DJU = false; 
         }
 
+        else if(Input.GetKeyDown(KeyCode.Space) && !isOnGround && !DJU)
+        {
+            DJU = true;
+            rb.AddForce(Vector3.up * DJF, ForceMode.Impulse);
+            playerAnim.Play("Running_Jump", a);
+            PA.PlayOneShot(jumpSound, 1.0f);
+        }
 
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            doubleSpeed = true;
+            playerAnim.SetFloat("Speed_Multiplier", 2.0f);
+        }
+        else if (doubleSpeed)
+        {
+            doubleSpeed = false;
+            playerAnim.SetFloat("Speed_Multiplier", 1.0f);
 
-
+        }
 
 
     }
