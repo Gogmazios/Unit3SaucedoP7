@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] op;
-    private Vector3 spawnPos = new Vector3(25, 0, 0);
+    private Vector3 spawnPos = new Vector3(35, 0, 0);
     private float sd = 2;
     private float rr = 2;
     public PlayerController Player;

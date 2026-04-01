@@ -338,7 +338,7 @@ Transform:
   m_GameObject: {fileID: 534669902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.69, y: 4.31, z: -16.14}
+  m_LocalPosition: {x: 6.85, y: 3.66, z: -14.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -401,7 +401,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 834bc99524a174a378e982623582c06d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.447
+  m_Volume: 0.076
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -712,7 +712,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.938
+  m_Volume: 0.511
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -810,11 +810,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1419152992, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.64
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 1419152992, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.15
+      value: 4.06
       objectReference: {fileID: 0}
     - target: {fileID: 1419152992, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -986,7 +986,7 @@ Transform:
   m_GameObject: {fileID: 835818919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45, y: 9.5, z: 4}
+  m_LocalPosition: {x: 41.2, y: 9.6, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   score: 0
   Player: {fileID: 0}
   start: {fileID: 1480559189}
-  lerp: 7
+  lerp: 5
 --- !u!4 &1721605554
 Transform:
   m_ObjectHideFlags: 0
@@ -1523,12 +1523,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1288574796868464085, guid: b847bc95d6651b847865fa3fd10acc3d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288574796868464085, guid: b847bc95d6651b847865fa3fd10acc3d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288574796868464085, guid: b847bc95d6651b847865fa3fd10acc3d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288574796868464085, guid: b847bc95d6651b847865fa3fd10acc3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45
+      value: 41.2
       objectReference: {fileID: 0}
     - target: {fileID: 1288574796868464085, guid: b847bc95d6651b847865fa3fd10acc3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.5
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 1288574796868464085, guid: b847bc95d6651b847865fa3fd10acc3d, type: 3}
       propertyPath: m_LocalPosition.z
