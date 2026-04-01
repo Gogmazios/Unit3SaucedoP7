@@ -16,7 +16,9 @@ public class PlayerController : MonoBehaviour
     public bool DJU = false;
     public float DJF; 
     public int a;
-    public bool doubleSpeed = false; 
+    public bool doubleSpeed = false;
+    public float yRange = 16;
+    public float yyRange = 1; 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -63,6 +65,27 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetFloat("Speed_Multiplier", 1.0f);
 
         }
+
+        if (transform.position.x < yRange)
+        {
+            transform.position = new Vector3(yRange, transform.position.y );
+        }
+        if (transform.position.x > yyRange)
+        {
+            transform.position = new Vector3(yyRange, transform.position.y );
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
