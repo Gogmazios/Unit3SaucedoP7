@@ -2,10 +2,6 @@ using UnityEngine;
 
 public class RepeatBackground : MonoBehaviour
 {
-
-
-
-
     private Vector3 startPos;
     private float repeatWidth; 
 
@@ -14,7 +10,6 @@ public class RepeatBackground : MonoBehaviour
     {
         startPos = transform.position;
         repeatWidth = GetComponent<BoxCollider>().size.x / 2; 
-
     }
 
     // Update is called once per frame
